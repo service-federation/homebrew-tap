@@ -1,25 +1,25 @@
 class Fed < Formula
   desc "Orchestrate your local dev stack from one config file"
   homepage "https://github.com/service-federation/fed"
-  version "3.4.0"
+  version "3.4.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v3.4.0/fed-aarch64-apple-darwin.tar.xz"
-      sha256 "988f8a5001e01bd837a98f2ef3e058450d8de7f910626ff694cf43808cf0326f"
+      url "https://github.com/service-federation/fed/releases/download/v3.4.1/fed-aarch64-apple-darwin.tar.xz"
+      sha256 "a480f36ab79280e4988349706758bc485355599a41281cf5a12873797741cbd4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v3.4.0/fed-x86_64-apple-darwin.tar.xz"
-      sha256 "8454436d90ae07099fa79ae0a7fd5aed7ec77c9982e520639da8db8e1fbdf1e5"
+      url "https://github.com/service-federation/fed/releases/download/v3.4.1/fed-x86_64-apple-darwin.tar.xz"
+      sha256 "40378e10e8019ae63f374233bf4c2114f345f39b43a6e236bdafcdc10e14726e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v3.4.0/fed-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b769c7e357dac6780f407470a06ecc7fe84fe5da6245927765b58951ad7a02ea"
+      url "https://github.com/service-federation/fed/releases/download/v3.4.1/fed-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5f2e0cede8054556d4415b3c7bbe97fd73225cb05facf1ac835702640b9bf794"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v3.4.0/fed-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d2d565c75cac49d7cb1072dd1825690db7555e1d507ed9d9abceb4d4cbc305b1"
+      url "https://github.com/service-federation/fed/releases/download/v3.4.1/fed-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cb139f8d3a14962c6dba960ee764e7fcc6030ee0c75f4625024fd6b7fbc30d6e"
     end
   end
   license "MIT"
