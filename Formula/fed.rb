@@ -1,25 +1,25 @@
 class Fed < Formula
-  desc "Orchestrate your local dev stack from one config file"
+  desc "Run native apps and Docker dependencies as an isolated dev stack per Git worktree"
   homepage "https://github.com/service-federation/fed"
-  version "7.2.0"
+  version "7.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.2.0/fed-aarch64-apple-darwin.tar.xz"
-      sha256 "8e9beac0bc1cc749a32b08d745e5db5943c69ab4c58789b154b3c570732fc27e"
+      url "https://github.com/service-federation/fed/releases/download/v7.3.0/fed-aarch64-apple-darwin.tar.xz"
+      sha256 "f6b3c2195cc76bc43f18f1a58e9f9b710aed00aa40bd59e8040c7621ed707770"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.2.0/fed-x86_64-apple-darwin.tar.xz"
-      sha256 "96470313c552f8522f5d7abf98437c5e7547d5833b42deee2527d11338b02da6"
+      url "https://github.com/service-federation/fed/releases/download/v7.3.0/fed-x86_64-apple-darwin.tar.xz"
+      sha256 "32f8b8c005832f925b8ec1d37c263e8e76af7863462bd41cce0bffe57235b184"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.2.0/fed-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f73266d4f8ab187f6535dfea4582d63e8bc348432bb4fbf4fc434002ee6bb5ff"
+      url "https://github.com/service-federation/fed/releases/download/v7.3.0/fed-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "9dd20c42ac5340a7d266afa995d859a440db171fbf72c0d6cef5c0b6b8667e80"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.2.0/fed-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ed00f41dfc28cc1e7703ed16f4191cbdb4933394e2224863638ce9974250eb60"
+      url "https://github.com/service-federation/fed/releases/download/v7.3.0/fed-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7d8396ed3344ba47c8616ea8aad7cb6c1230b349cc204966d4ba6af5acde43af"
     end
   end
   license "MIT"
