@@ -1,25 +1,25 @@
 class Fed < Formula
   desc "Run native apps and Docker dependencies as an isolated dev stack per Git worktree"
   homepage "https://github.com/service-federation/fed"
-  version "7.4.0"
+  version "7.5.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.4.0/fed-aarch64-apple-darwin.tar.xz"
-      sha256 "73f31dd296508a0f9e04e534df0748473ef0f469170da0020c2deb038a829b53"
+      url "https://github.com/service-federation/fed/releases/download/v7.5.0/fed-aarch64-apple-darwin.tar.xz"
+      sha256 "b4d313e286d25ef74441a7261d7063955f361c3e7b08aff54d704379e3a749d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.4.0/fed-x86_64-apple-darwin.tar.xz"
-      sha256 "3e9ce470eb55453f34c1f9df999f3e5418b98e4bca4d9e8fe19ed5ae91138e10"
+      url "https://github.com/service-federation/fed/releases/download/v7.5.0/fed-x86_64-apple-darwin.tar.xz"
+      sha256 "2ea2aed83d1bf242b796224388979ebc20ba33185a6bd70fdb201ab6787eb897"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.4.0/fed-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f912aabc51737a69542d11417c3b0687e9a96a12e261841cd7a09f07edbf428b"
+      url "https://github.com/service-federation/fed/releases/download/v7.5.0/fed-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0538c668795f1f67cb092919bc169e6c2a9d6ef9a8ec2b3cd2e86ba64755288d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.4.0/fed-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b8af48eb16c1d17b6c373b69181ff3f6000130882f02fb82e89532b64266a552"
+      url "https://github.com/service-federation/fed/releases/download/v7.5.0/fed-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "95b3a21f9fdce07ac60dbf3a14324f5a2f0abd65e14a787781201d4061da622d"
     end
   end
   license "MIT"
