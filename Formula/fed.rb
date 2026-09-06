@@ -1,25 +1,25 @@
 class Fed < Formula
   desc "Run native apps and Docker dependencies as an isolated dev stack per Git worktree"
   homepage "https://github.com/service-federation/fed"
-  version "7.9.1"
+  version "7.9.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.9.1/fed-aarch64-apple-darwin.tar.xz"
-      sha256 "8571c8a5cd784bfd293ff0b3bc615bf3106ce687f493ad7694b89df7274cbbc2"
+      url "https://github.com/service-federation/fed/releases/download/v7.9.2/fed-aarch64-apple-darwin.tar.xz"
+      sha256 "8b48ed0761fbec153758eb7c428b19c59f193d98590835841f87506df7a20b7c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.9.1/fed-x86_64-apple-darwin.tar.xz"
-      sha256 "d68dc6b804702179c3b46f8c5065b99ec76790d5aa8d89bbd70c1531f9f00d5e"
+      url "https://github.com/service-federation/fed/releases/download/v7.9.2/fed-x86_64-apple-darwin.tar.xz"
+      sha256 "83ecfd3bcaa2bbcc04f2497e58a3654a36434be877f73acbdea25ffd287141b6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/service-federation/fed/releases/download/v7.9.1/fed-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ea17afc9e1523b9e7d1599e5b63fe267998d71101269b046423b89fb0547aefc"
+      url "https://github.com/service-federation/fed/releases/download/v7.9.2/fed-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e547f219226b34470acea5798641dc50f375348326117847d882eb0c6f4b391a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/service-federation/fed/releases/download/v7.9.1/fed-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6ae6ecf8b1922eeda9df6eab54f199e6446f0c260c9dd74999a4a5a02cafb3b4"
+      url "https://github.com/service-federation/fed/releases/download/v7.9.2/fed-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d801542ab906468e4b5c3fad5b6ff9ce42fd5ffaf40777cef9df0082e42010ff"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Fed < Formula
   end
 
   def install
-    bin.install "fed" if OS.mac? && Hardware::CPU.arm?
-    bin.install "fed" if OS.mac? && Hardware::CPU.intel?
-    bin.install "fed" if OS.linux? && Hardware::CPU.arm?
-    bin.install "fed" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "fed"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "fed"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "fed"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "fed"
+    end
 
     install_binary_aliases!
 
